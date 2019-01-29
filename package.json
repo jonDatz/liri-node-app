@@ -1,0 +1,27 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "A word request processing app using node/axios to query Spotify/OMDB/Bands in Town API's. Technologies used: Node/Axios/Momentjs/DotEnv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonDatz/liri-node-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonDatz/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/jonDatz/liri-node-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "inquirer": "^6.2.1",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.0.7"
+  }
+}
