@@ -1,17 +1,18 @@
 require("dotenv").config();
 const keys = require("./keys.js");
+// add npm packages
 const axios = require("axios");
 const Spotify = require("node-spotify-api");
 const moment = require("moment");
 const fs = require('fs');
 
 const spotify = new Spotify(keys.spotify);
-// How could I use inquirer to make this cleaner?
+
 
 let type = process.argv[2];
 
-// Build each Api's calls first
 
+// Build each Api's calls first
 
 // BandsinTown API
 
@@ -21,9 +22,8 @@ let bitEvents = function () {
 
 
     let bitURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
-
     console.log("Checking BandsinTown..");
-    // We then run the request with axios module on a URL with a JSON
+
     axios
         .get(bitURL)
         .then(
@@ -60,6 +60,7 @@ let bitEvents = function () {
         })
 
 };
+
 
 // Spotify API
 
@@ -114,8 +115,6 @@ let movieDetails = function () {
 
         )
 };
-
-
 
 
 
