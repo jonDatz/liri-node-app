@@ -3,16 +3,16 @@ A word request processing app using node/axios to query Spotify/OMDB/Bands in To
 
 
 
-###BandsinTown api call works properly as seen below
+## BandsinTown api call works properly as seen below
 
 ![bandsintown](imagesAndVideo/concert-this.gif)
 
 
-###OMDB api call works properly as seen below
+## OMDB api call works properly as seen below
 
 ![omdb](/imagesAndVideo/movie-this.gif)
 
-###Spotify api call works properly as seen below
+##Spotify api call works properly as seen below
 
 
 ![spotify](imagesAndVideo/spotify-this.gif)
