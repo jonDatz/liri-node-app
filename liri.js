@@ -92,8 +92,8 @@ let spotifySong = function () {
             let spotArtist = response.tracks.items[0].artists[0].name;
 
 
-            console.log("\nArtist: " + spotArtist + "\nSong Name: " + songName + "\nAlbum: " + albumName + "\nUrl: " + previewName );
-            
+            console.log("\nArtist: " + spotArtist + "\nSong Name: " + songName + "\nAlbum: " + albumName + "\nUrl: " + previewName);
+
             console.log("\n[=============================================================]");
 
 
@@ -139,28 +139,51 @@ let movieDetails = function () {
         )
 };
 
+// DO WHAT IT SAYS
+let doWhatItSays = function () {
+    fs.readFile('random.txt', 'utf8', function (error, data) {
+            if (error) {
+                console.log('ERROR: Reading random.txt -- ' + error);
+                return;
+            } else {
+                // Creates array with data and splits
+                var fileArray = data.split(",");
+                // Sets action to first item in array.
+                type = fileArray[0];
+                console.log(type);
+                // Sets third argument to second item in array.
+                let dataRand = fileArray[1];
+                console.log(dataRand);
+            }
+        })
+    };
 
 
-// Switch case for listing multiple commands: `concert-this`,   `spotify-this-song`,    `movie-this`,    `do-what-it-says`
+    // Switch case for listing multiple commands: `concert-this`,   `spotify-this-song`,    `movie-this`,    `do-what-it-says`
 
-switch (type) {
-    case "concert-this":
-        bitEvents();
-        break;
+    switch (type) {
+        case "concert-this":
+            bitEvents();
+            break;
 
-    case "spotify-this-song":
-        spotifySong();
-        break;
+        case "spotify-this-song":
+            spotifySong();
+            break;
 
-    case "movie-this":
-        movieDetails();
-        break;
+        case "movie-this":
+            movieDetails();
+            break;
 
-    case "do-what-it-says":
-        console.log("switch case do-all worked!");
+        case "do-what-it-says":
+            console.log("switch case do-all worked!");
+            doWhatItSays();
 
-        break;
 
-    default:
-        break;
-}
+
+            break;
+
+        default:
+
+
+            break;
+    }
