@@ -63,18 +63,41 @@ let bitEvents = function () {
 
 
 // Spotify API
+// * Artist(s)
+
+// * The song's name
+
+// * A preview link of the song from Spotify
+
+// * The album that the song is from
 
 let spotifySong = function () {
     let song = process.argv.slice(3).join(" ");
-    console.log(song);
     spotify
         .search({
             type: 'track',
-            query: 'all the small things'
+            query: song
         })
         .then(function (response) {
-            console.log("spotify worked");
-            console.log(response);
+            console.log("\nChecking Spotify...\n");
+            console.log("[=============================================================]");
+
+            // SONG NAME
+            let songName = response.tracks.items[1].name;
+            // ALBUM NAME
+            let albumName = response.tracks.items[1].album.name;
+            // PREVIEW URL
+            let previewName = response.tracks.items[1].preview_url;
+            // spotArtist gets the artist. DONT TOUCH
+            let spotArtist = response.tracks.items[0].artists[0].name;
+
+
+            console.log("\nArtist: " + spotArtist + "\nSong Name: " + songName + "\nAlbum: " + albumName + "\nUrl: " + previewName );
+            
+            console.log("\n[=============================================================]");
+
+
+
         })
         .catch(function (err) {
             console.log("spotify didnt work");
@@ -122,17 +145,14 @@ let movieDetails = function () {
 
 switch (type) {
     case "concert-this":
-        console.log("switch case bandsintown worked!");
         bitEvents();
         break;
 
     case "spotify-this-song":
-        console.log("switch case spotify worked!");
         spotifySong();
         break;
 
     case "movie-this":
-        console.log("switch case movie worked!");
         movieDetails();
         break;
 
