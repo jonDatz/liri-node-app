@@ -10,9 +10,9 @@ A word request processing app using node/axios to query Spotify/OMDB/Bands in To
 
 #OMDB api call works properly as seen below
 
-![omdb](https://imgur.com/p7juGTg)
+![omdb](/imagesAndVideo/movie-this.gif)
 
 #Spotify api call works properly as seen below
 
 
-![spotify](https://imgur.com/0CNaHZ1)
+![spotify](imagesAndVideo/spotify-this.gif)
